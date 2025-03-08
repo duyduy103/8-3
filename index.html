@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bông hoa CSS</title>
+    <link rel="stylesheet" href="hoacss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <p>Chúc bạn <span id="displayName">...</span> ngày 8/3 được ôm hoa, tay cầm quà, tiền bạc đầy nhà, miệng cười như 🌼🌼🌼</p>
+    
+    <div class="flower" id = "fl2">
+        <div class="petal" style="--angle: 0deg;"></div>
+        <div class="petal" style="--angle: 45deg;"></div>
+        <div class="petal" style="--angle: 90deg;"></div>
+        <div class="petal" style="--angle: 135deg;"></div>
+        <div class="petal" style="--angle: 180deg;"></div>
+        <div class="petal" style="--angle: 225deg;"></div>
+        <div class="petal" style="--angle: 270deg;"></div>
+        <div class="petal" style="--angle: 315deg;"></div>
+        <div class="center"></div>
+    </div>
+    <div class="flower" id = "fl1">
+        <div class="petal" style="--angle: 0deg;"></div>
+        <div class="petal" style="--angle: 45deg;"></div>
+        <div class="petal" style="--angle: 90deg;"></div>
+        <div class="petal" style="--angle: 135deg;"></div>
+        <div class="petal" style="--angle: 180deg;"></div>
+        <div class="petal" style="--angle: 225deg;"></div>
+        <div class="petal" style="--angle: 270deg;"></div>
+        <div class="petal" style="--angle: 315deg;"></div>
+        <div class="center"></div>
+    </div>
+   
+    <div class = "hinhanh" >
+        <img id = "ha1" src = "tải xuống.gif">
+        <img id = "ha2" src = "Happy Dance GIF - Happy Dance Dance Moves - Discover & Share GIFs.gif">
+        <img id = "ha3" src ="3.gif"> 
+        </div>
+     <audio autoplay >
+        <source src = "nhạc.mp3" type = "audio/mpeg">
+     </audio>   
+    <div class ="hinhanh1" >
+        <img src = "be_ogu_nhay.gif.gif">
+        <img src = "be_ogu_nhay.gif.gif">
+        <img src = "be_ogu_nhay.gif.gif">
+        <img src = "be_ogu_nhay.gif.gif">
+        <img src = "be_ogu_nhay.gif.gif">
+        <img src = "be_ogu_nhay.gif.gif">
+        <img src = "be_ogu_nhay.gif.gif">
+        
+    </div>      
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const name = localStorage.getItem("userName");
+            
+            if (!name) {
+                // Nếu chưa có tên, chuyển hướng sang trang nhập tên
+                window.location.href = "nhapten.html";
+            } else {
+                // Nếu đã có tên, hiển thị nó
+                document.getElementById("displayName").textContent = name;
+            }
+        });
+    </script>
+</body>
+</html>

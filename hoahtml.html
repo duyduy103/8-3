@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bông hoa CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" id="nameInput" placeholder="Nhập tên..." required>
+    <button onclick="saveName()">ENTER</button>
+
+    <script>
+        function saveName() {
+            let name = document.getElementById("nameInput").value.trim();
+            if (name !== "") {
+                localStorage.setItem("userName", name); // Lưu vào localStorage
+                window.location.href = "index.html"; // Quay lại trang chính
+            } else {
+                alert("Vui lòng nhập tên!");
+            }
+        }
+    </script>
+</body>
+</html>

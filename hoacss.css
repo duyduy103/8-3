@@ -1,0 +1,95 @@
+body {
+  height: 100vh;
+  background-color: #ffebf0;
+}
+p {
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Bebas Neue';
+  margin-top:100px;
+}
+.flower {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  animation: bloom 0.0005s infinite alternate ease-in-out;
+}
+.petal {
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  background: pink;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  animation: petalExpand 2s infinite alternate ease-in-out;
+}
+.center {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: yellow;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(20%, 65%);
+}
+
+.hinhanh img {
+  width: 100px;  
+  height: 100px;
+}
+.hinhanh {
+  display: flex;
+  justify-content: center; 
+  gap: 10px; 
+}
+img {
+  filter: brightness(1) contrast(2);
+  
+}
+.hinhanh1  {
+  display: flex;
+  align-items: auto;
+}
+.hinhanh1 img {
+  width: 200px;
+  height:200px;
+  animation : moveRight 0.3s linear infinite;
+}
+
+ #fl1 {
+  display: flex;
+  justify-content: space-between; 
+  margin-left: 1260px;
+ }
+ #fl2 {
+  display: flex;
+  justify-content: space-between; 
+  margin-right: 1260px;
+ }         
+ 
+/* Xoay cánh hoa */
+.petal:nth-child(1) { transform: rotate(0deg) translate(0, -50px); }
+.petal:nth-child(2) { transform: rotate(45deg) translate(0, -50px); }
+.petal:nth-child(3) { transform: rotate(90deg) translate(0, -50px); }
+.petal:nth-child(4) { transform: rotate(135deg) translate(0, -50px); }
+.petal:nth-child(5) { transform: rotate(180deg) translate(0, -50px); }
+.petal:nth-child(6) { transform: rotate(225deg) translate(0, -50px); }
+.petal:nth-child(7) { transform: rotate(270deg) translate(0, -50px); }
+.petal:nth-child(8) { transform: rotate(315deg) translate(0, -50px); }
+
+/* Hiệu ứng nở hoa */
+@keyframes bloom {
+  0% { transform: scale(0.8); }
+  100% { transform: scale(1.2); }
+}
+@keyframes petalExpand {
+  0% { transform: scale(0.8) rotate(var(--angle)) translate(0, -50px); }
+  100% { transform: scale(1) rotate(var(--angle)) translate(0, -60px); }
+}
+@keyframes moveRight {
+  0% { transform: translateX(-100px); }  
+  100% { transform: translateX(300px); }  
+}
